@@ -3,7 +3,7 @@ import './ReviewsPage.scss'
 const ReviewsPage = () => {
   return (
     <div className="reviews-page">
-      reviews-page
+      reviews-pages
     </div>
   )
 }
