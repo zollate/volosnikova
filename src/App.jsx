@@ -1,10 +1,11 @@
 import Header from "./layouts/Header/index.js";
 import Content from "./layouts/Content/index.js";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import News from "./pages/News/";
-import Catalog from "./pages/Catalog";
-import Reviews from "./pages/Reviews";
 import Home from "./pages/Home";
+import ReviewsPage from "./pages/ReviewsPage";
+import Catalog from "./pages/Catalog";
+import News from "./pages/News/News.jsx";
+
 
 function App() {
   return (
@@ -15,22 +16,21 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home/>}
+            element={<Home />}
           />
           <Route
             path="/reviews"
-            element={<Reviews/>}
+            element={<ReviewsPage />}
           />
           <Route
             path="/catalog"
-            element={<Catalog/>}
+            element={<Catalog />}
           />
           <Route
             path="/news"
-            element={<News/>}
+            element={<News />}
           />
         </Routes>
-        
       </Router>
     </>
   )
