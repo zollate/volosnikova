@@ -1,10 +1,7 @@
 import Header from "./layouts/Header/index.js";
 import Content from "./layouts/Content/index.js";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import ReviewsPage from "./pages/ReviewsPage";
-import Catalog from "./pages/Catalog";
-import News from "./pages/News/News.jsx";
+
 
 
 function App() {
@@ -13,24 +10,6 @@ function App() {
       <Router>
         <Header />
         <Content />
-        <Routes>
-          <Route
-            path="/"
-            element={<Home />}
-          />
-          <Route
-            path="/reviews"
-            element={<ReviewsPage />}
-          />
-          <Route
-            path="/catalog"
-            element={<Catalog />}
-          />
-          <Route
-            path="/news"
-            element={<News />}
-          />
-        </Routes>
       </Router>
     </>
   )

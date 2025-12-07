@@ -1,7 +1,9 @@
+import Button from "../../components/Button/index.js";
+
 const Home = () => {
   return (
     <div>
-      home
+      <Button> asdasd </Button>
     </div>
   );
 };
