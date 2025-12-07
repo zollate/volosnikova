@@ -144,3 +144,31 @@
   from { opacity: 0; transform: scale(.95); }
   to { opacity: 1; transform: scale(1); }
 }
+/* ===== PAGINATION ===== */
+
+.pagination {
+  margin: 30px auto 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  background: var(--dark-plus-1);
+  color: var(--col-d-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.pagination button:hover {
+  background: var(--primary-accent-0);
+}
+
+.pagination .active {
+  background: var(--primary-accent-0);
+  box-shadow: 0 0 12px var(--primary-accent-0);
+}
