@@ -1,0 +1,17 @@
+export const catalogItems = [
+  { id: 1, title: 'Спойлер ВАЗ 2107', price: 5000, category: 'Кузов', image: '/img/spoiler.jpg', description: 'Качественный спойлер для ВАЗ 2107.' },
+  { id: 2, title: 'Фары ВАЗ 2107', price: 3500, category: 'Свет и оптика', image: '/img/fary.jpg', description: 'Яркие фары для вашего автомобиля.' },
+  { id: 3, title: 'Руль спортивный', price: 2000, category: 'Салон и интерьер', image: '/img/rule.jpg', description: 'Спортивный руль с улучшенным хватом.' },
+  { id: 4, title: 'Диски легкосплавные ВСМПО ВЕГА', price: 7000, category: 'Колёса и подвеска', image: '/img/diski.jpg', description: 'Лёгкие диски для лучшей управляемости.' },
+  { id: 5, title: 'Выхлопная труба DK PRO', price: 4500, category: 'Двигатель и выхлоп', image: '/img/vyhlop.jpg', description: 'Надёжная и долговечная труба.' },
+  { id: 6, title: 'Спойлер ВАЗ 2107', price: 5000, category: 'Кузов', image: '/img/spoiler.jpg', description: 'Качественный спойлер для ВАЗ 2107.' },
+  { id: 7, title: 'Фары ВАЗ 2107', price: 3500, category: 'Свет и оптика', image: '/img/fary.jpg', description: 'Яркие фары для вашего автомобиля.' },
+  { id: 8, title: 'Руль спортивный', price: 2000, category: 'Салон и интерьер', image: '/img/rule.jpg', description: 'Спортивный руль с улучшенным хватом.' },
+  { id: 9, title: 'Диски легкосплавные ВСМПО ВЕГА', price: 7000, category: 'Колёса и подвеска', image: '/img/diski.jpg', description: 'Лёгкие диски для лучшей управляемости.' },
+  { id: 10, title: 'Выхлопная труба DK PRO', price: 4500, category: 'Двигатель и выхлоп', image: '/img/vyhlop.jpg', description: 'Надёжная и долговечная труба.' },
+  { id: 11, title: 'Спойлер ВАЗ 2107', price: 5000, category: 'Кузов', image: '/img/spoiler.jpg', description: 'Качественный спойлер для ВАЗ 2107.' },
+  { id: 12, title: 'Фары ВАЗ 2107', price: 3500, category: 'Свет и оптика', image: '/img/fary.jpg', description: 'Яркие фары для вашего автомобиля.' },
+  { id: 13, title: 'Руль спортивный', price: 2000, category: 'Салон и интерьер', image: '/img/rule.jpg', description: 'Спортивный руль с улучшенным хватом.' },
+  { id: 14, title: 'Диски легкосплавные ВСМПО ВЕГА', price: 7000, category: 'Колёса и подвеска', image: '/img/diski.jpg', description: 'Лёгкие диски для лучшей управляемости.' },
+  { id: 15, title: 'Выхлопная труба DK PRO', price: 4500, category: 'Двигатель и выхлоп', image: '/img/vyhlop.jpg', description: 'Надёжная и долговечная труба.' },
+];

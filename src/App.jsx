@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import ReviewsPage from "./pages/ReviewsPage";
 import Catalog from "./pages/Catalog";
 import News from "./pages/News/News";
+import CatalogItemPage from "./pages/CatalogItemPage/CatalogItemPage";
+
 
 
 function App() {
@@ -25,7 +27,10 @@ function App() {
           <Route
             path="/catalog"
             element={<Catalog />}
+            
           />
+          <Route path="/catalog/item/:id" element={<CatalogItemPage />} />
+
           <Route
             path="/news"
             element={<News />}
