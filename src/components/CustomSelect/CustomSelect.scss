@@ -1,0 +1,85 @@
+// Переменные (для консистентности с Catalog.scss)
+$primary-color: #e63946;
+$text-dark: #1d1d1f;
+$white: #ffffff;
+$radius: 12px;
+$shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+}
+
+.custom-select-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border: 1px solid #e0e0e0;
+  border-radius: $radius;
+  background-color: $white;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: $text-dark;
+  font-weight: 500;
+
+  
+  &.open {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+
+  svg {
+    transition: transform 0.2s;
+    margin-left: 10px;
+  }
+  
+  &.open svg {
+    transform: rotate(180deg);
+  }
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  z-index: 1000; // Поверх других элементов
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 0;
+  background-color: $white;
+  border-radius: $radius;
+  box-shadow: $shadow-sm;
+  list-style: none;
+  border: 1px solid #e0e0e0;
+}
+
+.custom-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s;
+
+  // Стиль при наведении
+  &:hover {
+    background-color: #f0f0f0;
+    color: $primary-color;
+  }
+
+  // Стиль для выбранного элемента
+  &.selected {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    font-weight: 600;
+  }
+}
