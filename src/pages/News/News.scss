@@ -1,17 +1,17 @@
 .news-page {
-  background: var(--main-background-1);
+  background: #1d1d1f; /* фон в стиле товарища */
   min-height: 100vh;
   padding: 40px 0;
-  color: var(--col-d-text);
-  font-family: "Montserrat", sans-serif;
+  color: #e6e6e6; /* светлый текст */
+  font-family: "Inter", "Montserrat", sans-serif;
 }
 
 .title {
   text-align: center;
   font-size: 40px;
   font-weight: 800;
-  color: var(--primary-accent-0);
-  text-shadow: 0 0 12px var(--primary-accent-0);
+  color: #27ae60; /* зелёный акцент */
+  text-shadow: 0 0 12px #27ae60;
   margin-bottom: 35px;
 }
 
@@ -27,8 +27,8 @@
 
 /* CARD */
 .card {
-  background: var(--dark-2);
-  border: 1px solid var(--dark-plus-1);
+  background-color: rgba(230, 57, 70, 0.08); /* лёгкий фон как у товарища */
+  border: 1px solid #444;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
@@ -37,14 +37,14 @@
 }
 .card:hover {
   transform: translateY(-4px);
-  border-color: var(--primary-accent-0);
-  box-shadow: 0 0 18px var(--primary-accent-0);
+  border-color: #27ae60;
+  box-shadow: 0 0 18px #27ae60;
 }
 .card img {
   width: 210px;
   height: 160px;
   object-fit: cover;
-  border-right: 2px solid var(--dark-plus-1);
+  border-right: 2px solid #86868b;
 }
 .info {
   padding: 18px 20px;
@@ -52,9 +52,9 @@
   flex-direction: column;
   gap: 7px;
 }
-.info h2 { font-size: 22px; color: var(--primary-accent-0); font-weight: 700;}
-.info p { font-size: 15.5px; color: var(--col-d-text2);}
-.info span { font-size: 13px; opacity: .6; }
+.info h2 { font-size: 22px; color: #27ae60; font-weight: 700;}
+.info p { font-size: 15.5px; color: #86868b;}
+.info span { font-size: 13px; opacity: .6; color: #ccc; }
 
 /* === MODAL === */
 .modal-bg {
@@ -69,14 +69,14 @@
 }
 
 .modal {
-  background: var(--dark-3);
+  background: #1d1d1f;
   padding: 25px;
   border-radius: 16px;
   width: 500px;
   max-width: 90%;
-  color: var(--col-d-text);
-  border: 1px solid var(--primary-accent-0);
-  box-shadow: 0 0 25px var(--primary-accent-0);
+  color: #e6e6e6;
+  border: 1px solid #27ae60;
+  box-shadow: 0 0 25px #27ae60;
   animation: fadeIn .25s ease;
   position: relative;
 }
@@ -93,7 +93,7 @@
   right: 12px;
   font-size: 20px;
   border: none;
-  background: var(--primary-accent-0);
+  background: #27ae60;
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
@@ -107,8 +107,8 @@
   gap: 10px;
 }
 .pagination button {
-  background: var(--dark-plus-1);
-  color: var(--col-d-text);
+  background: #444;
+  color: #e6e6e6;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
@@ -117,8 +117,8 @@
 }
 .pagination button:hover,
 .pagination .active {
-  background: var(--primary-accent-0);
-  box-shadow: 0 0 12px var(--primary-accent-0);
+  background: #27ae60;
+  box-shadow: 0 0 12px #27ae60;
 }
 
 /* — Animation — */
