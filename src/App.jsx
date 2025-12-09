@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import ReviewsPage from "./pages/ReviewsPage";
 import Catalog from "./pages/Catalog";
-import News from "./pages/News/News.jsx";
+import News from "./pages/News/News";
 
 
 function App() {

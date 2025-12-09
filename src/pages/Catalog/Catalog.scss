@@ -1,3 +1,11 @@
 .catalog {
+  padding: 20px;
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
 
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }
