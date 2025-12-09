@@ -10,6 +10,8 @@ const Catalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('Все');
   const [maxPrice, setMaxPrice] = useState(10000);
   const [sortOrder, setSortOrder] = useState('asc');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12; // количество товаров на одной странице
 
   const filteredItems = catalogItems.filter(item =>
     (selectedCategory === 'Все' || item.category === selectedCategory) &&
@@ -21,6 +23,17 @@ const Catalog = () => {
     else return b.price - a.price;
   });
 
+  // Пагинация
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredAndSortedItems.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredAndSortedItems.length / itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0); // скролл вверх при смене страницы
+  }
+
   return (
     <div className="catalog">
       {/* Левая панель с фильтрами */}
@@ -31,7 +44,7 @@ const Catalog = () => {
             <button
               key={cat}
               className={`catalog__category-btn ${selectedCategory === cat ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => { setSelectedCategory(cat); setCurrentPage(1); }}
             >
               {cat}
             </button>
@@ -47,7 +60,7 @@ const Catalog = () => {
               max="10000"
               step="500"
               value={maxPrice}
-              onChange={e => setMaxPrice(Number(e.target.value))}
+              onChange={e => { setMaxPrice(Number(e.target.value)); setCurrentPage(1); }}
             />
           </label>
         </div>
@@ -55,7 +68,7 @@ const Catalog = () => {
         <div className="catalog__sort">
           <label>
             Сортировка по цене:
-            <select value={sortOrder} onChange={e => setSortOrder(e.target.value)}>
+            <select value={sortOrder} onChange={e => { setSortOrder(e.target.value); setCurrentPage(1); }}>
               <option value="asc">Сначала дешёвые</option>
               <option value="desc">Сначала дорогие</option>
             </select>
@@ -67,7 +80,7 @@ const Catalog = () => {
       <div className="catalog__main">
         <h1 className="catalog__title">Каталог тюнинга АвтоВАЗа</h1>
         <div className="catalog__grid">
-          {filteredAndSortedItems.map(item => (
+          {currentItems.map(item => (
             <Link
               key={item.id}
               to={`/catalog/item/${item.id}`}
@@ -81,6 +94,21 @@ const Catalog = () => {
             </Link>
           ))}
         </div>
+
+        {/* Пагинация */}
+        {totalPages > 1 && (
+          <div className="catalog__pagination">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+              <button
+                key={page}
+                className={`catalog__page-btn ${currentPage === page ? 'active' : ''}`}
+                onClick={() => handlePageChange(page)}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

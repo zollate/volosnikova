@@ -74,3 +74,26 @@
 .catalog {
   font-family: 'Montserrat', sans-serif;
 }
+.catalog__pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .catalog__page-btn {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+    &.active {
+      background-color: #e63946;
+      color: #fff;
+      border-color: #e63946;
+    }
+  }
+}
