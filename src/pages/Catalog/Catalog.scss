@@ -8,9 +8,43 @@
     text-align: center;
     margin-bottom: 24px;
   }
-}
-.catalog__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__categories {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__category-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+
+    &.active {
+      background-color: #ff0000;
+    }
+  }
+
+  &__price-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
 }
