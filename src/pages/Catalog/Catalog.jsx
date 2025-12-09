@@ -8,7 +8,7 @@ const categories = ['Все', 'Кузов', 'Свет и оптика', 'Сал�
 
 const Catalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('Все');
-  const [maxPrice, setMaxPrice] = useState(10000);
+  const [maxPrice, setMaxPrice] = useState(50000);
   const [sortOrder, setSortOrder] = useState('asc');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12; // количество товаров на одной странице
@@ -57,7 +57,7 @@ const Catalog = () => {
             <input
               type="range"
               min="0"
-              max="10000"
+              max="50000"
               step="500"
               value={maxPrice}
               onChange={e => { setMaxPrice(Number(e.target.value)); setCurrentPage(1); }}
