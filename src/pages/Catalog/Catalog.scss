@@ -1,3 +1,310 @@
-.catalog {
+// Переменные для легкой смены темы
+$primary-color: #e63946; // Яркий акцент
+$text-dark: #1d1d1f;
+$text-gray: #86868b;
+$bg-light: #f5f5f7;
+$white: #ffffff;
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+$radius: 16px;
 
+.catalog {
+  background-color: $bg-light;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Inter', 'Montserrat', sans-serif; // Более современный шрифт
+  color: $text-dark;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  // --- SIDEBAR ---
+  &__sidebar {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  &__sidebar-sticky {
+    position: sticky;
+    top: 24px; // Липкое поведение
+    background: $white;
+    padding: 24px;
+    border-radius: $radius;
+    box-shadow: $shadow-sm;
+  }
+
+  &__filter-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+
+  &__section {
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: $text-gray;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+  }
+
+  // --- CATEGORIES ---
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__category-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    color: $text-dark;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: left;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.03);
+      color: $primary-color;
+    }
+
+    &.active {
+      background-color: rgba($primary-color, 0.08);
+      color: $primary-color;
+      font-weight: 600;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background-color: $primary-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // --- RANGE SLIDER (Modern Style) ---
+  &__price-filter {
+    .price-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    input[type='range'] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      background: #ddd;
+      border-radius: 4px;
+      outline: none;
+      
+      // Chrome/Safari Thumb
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary-color;
+        cursor: pointer;
+        border: 2px solid $white;
+        box-shadow: 0 2px 6px rgba($primary-color, 0.4);
+        transition: transform 0.1s;
+        margin-top: -7px; // Центрирование
+      }
+
+      &:active::-webkit-slider-thumb {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // --- CUSTOM SELECT ---
+  &__select-wrapper {
+    position: relative;
+    
+    // Кастомная стрелочка
+    &::after {
+      content: '';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 6px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    appearance: none; // Убираем стандартный стиль
+    background-color: $white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+
+  // --- MAIN CONTENT ---
+  &__main {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
+
+  &__count {
+    color: $text-gray;
+    font-size: 0.9rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  &__card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px); // Эффект парения
+    }
+    
+    // Предполагается, что внутри CatalogCard есть свои стили,
+    // но добавим wrapper стили для консистентности
+    & > div {
+       height: 100%;
+       box-shadow: $shadow-sm;
+       border-radius: $radius;
+       background: $white;
+       overflow: hidden;
+       transition: box-shadow 0.3s ease;
+       
+       &:hover {
+         box-shadow: $shadow-md;
+       }
+    }
+  }
+
+  // --- EMPTY STATE ---
+  &__empty {
+    text-align: center;
+    padding: 60px 0;
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      color: $text-gray;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__reset-btn {
+    padding: 10px 24px;
+    background: $text-dark;
+    color: $white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  // --- PAGINATION ---
+  &__pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .catalog__page-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background-color: $white;
+      color: $text-dark;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: $shadow-sm;
+
+      &:hover {
+        border-color: #ddd;
+        background-color: #fafafa;
+      }
+
+      &.active {
+        background-color: $text-dark; // Черный (или primary) для активной страницы
+        color: $white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+    }
+  }
 }
