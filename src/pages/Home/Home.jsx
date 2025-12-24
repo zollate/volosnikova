@@ -3,6 +3,31 @@ import { useNavigate } from 'react-router-dom';
 import { catalogItems } from '../../data/catalogItems';
 import './Home.scss';
 
+// --- Новости ---
+const news = [
+  {
+    id: 1,
+    title: "Новая партия деталей БПАН",
+    text: "Рычаги, пружины, станс-комплекты — всё свежее и блестящее!",
+    date: "07.12.2025",
+    img: "/img/artem.jpg"
+  },
+  {
+    id: 2,
+    title: "Скидки до -30% на подвеску",
+    text: "Пока зима — тюнинг стоит дешевле!",
+    date: "06.12.2025",
+    img: "/img/ura1.jpg"
+  },
+  {
+    id: 3,
+    title: "Как отличить оригинал от подделки",
+    text: "3 признака, по которым сразу видно фейк.",
+    date: "05.12.2025",
+    img: "/img/ura2.jpg"
+  },
+];
+
 const Home = () => {
   const navigate = useNavigate();
   const featuredProducts = catalogItems.slice(0, 4);
@@ -21,11 +46,9 @@ const Home = () => {
             Создай автомобиль, который выделяется в потоке.
           </p>
           <div className="home-hero__actions">
-            {/* Используем обычные кнопки, стилизованные в Home.scss */}
             <button className="main-btn" onClick={() => navigate('/catalog')}>
               В каталог
             </button>
-            
           </div>
         </div>
       </section>
@@ -39,7 +62,6 @@ const Home = () => {
 
         <div className="home-products__grid">
           {featuredProducts.map((item) => (
-            /* Пишем структуру карточки прямо здесь */
             <div 
               key={item.id} 
               className="home-card" 
@@ -66,6 +88,27 @@ const Home = () => {
           <h2>Сделаем твой проект уникальным</h2>
           <p>Подбор запчастей и консультация по тюнингу от профессионалов.</p>
           <button className="main-btn" onClick={() => navigate('/catalog')}>Начать сейчас</button>
+        </div>
+      </section>
+
+      {/* --- НОВОСТИ --- */}
+      <section className="home-news">
+        <div className="home-news__header">
+          <h2>Свежие новости</h2>
+          <button className="text-btn" onClick={() => navigate('/news')}>Все новости →</button>
+        </div>
+
+        <div className="home-news__grid">
+          {news.map((item) => (
+            <div key={item.id} className="home-news-card" onClick={() => navigate('/news')}>
+              <img src={item.img} alt={item.title} />
+              <div className="home-news-info">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <span>{item.date}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
