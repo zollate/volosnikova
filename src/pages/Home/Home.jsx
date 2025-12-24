@@ -1,4 +1,4 @@
-import Button from "../../components/Button/index.js";
+import Button from '../../components/Button/index.js';
 
 const Home = () => {
   return (

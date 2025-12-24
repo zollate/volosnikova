@@ -29,11 +29,12 @@ $shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: $radius;
   background-color: $white;
   cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   color: $text-dark;
   font-weight: 500;
 
-  
   &.open {
     border-color: $primary-color;
     box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
@@ -43,7 +44,7 @@ $shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
     margin-left: 10px;
   }
-  
+
   &.open svg {
     transform: rotate(180deg);
   }
@@ -51,7 +52,7 @@ $shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
 
 .custom-select-dropdown {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   z-index: 1000; // Поверх других элементов
   width: 100%;
@@ -68,7 +69,9 @@ $shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 10px 16px;
   cursor: pointer;
   font-size: 0.95rem;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 
   // Стиль при наведении
   &:hover {

@@ -21,7 +21,7 @@ $radius: 16px;
   // --- Навигация ---
   &__nav {
     margin-bottom: 24px;
-    
+
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -30,7 +30,7 @@ $radius: 16px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
-      
+
       &:hover {
         color: $primary-color;
       }
@@ -59,7 +59,7 @@ $radius: 16px;
     background-color: $white;
     border-radius: $radius;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,7 @@ $radius: 16px;
     line-height: 1.1;
     font-weight: 800;
     margin: 0;
-    
+
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
@@ -165,13 +165,13 @@ $radius: 16px;
       list-style: none;
       padding: 0;
       margin: 0;
-      
+
       li {
         display: flex;
         justify-content: space-between;
         margin-bottom: 8px;
         font-size: 0.95rem;
-        
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -213,7 +213,7 @@ $radius: 16px;
       &:hover:not(:disabled) {
         background-color: #f0f0f0;
       }
-      
+
       &:disabled {
         opacity: 0.3;
         cursor: default;
@@ -245,14 +245,16 @@ $radius: 16px;
     font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition:
+      transform 0.2s,
+      background-color 0.2s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 
     &:hover {
       background-color: #000;
       transform: translateY(-2px);
     }
-    
+
     &:active {
       transform: scale(0.98);
     }
@@ -274,12 +276,12 @@ $radius: 16px;
       color: $primary-color;
     }
   }
-  
+
   .product-delivery-info {
     display: flex;
     gap: 20px;
     margin-top: 10px;
-    
+
     p {
       font-size: 0.85rem;
       color: $text-gray;

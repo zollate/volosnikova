@@ -4,12 +4,20 @@ import { Link, NavLink } from 'react-router-dom';
 function Header() {
   return (
     <header style={styles.header}>
-                <nav style={styles.nav}>
-          <Link to="/" style={styles.navLink}>Главная</Link>
-          <Link to="/about" style={styles.navLink}>О нас</Link>
-          <Link to="/services" style={styles.navLink}>Услуги</Link>
-          <Link to="/contacts" style={styles.navLink}>Контакты</Link>
-        </nav>
+      <nav style={styles.nav}>
+        <Link to="/" style={styles.navLink}>
+          Главная
+        </Link>
+        <Link to="/about" style={styles.navLink}>
+          О нас
+        </Link>
+        <Link to="/services" style={styles.navLink}>
+          Услуги
+        </Link>
+        <Link to="/contacts" style={styles.navLink}>
+          Контакты
+        </Link>
+      </nav>
 
       <div style={styles.container}>
         {/* Логотип и название */}
@@ -18,7 +26,7 @@ function Header() {
           <div style={styles.logo}>
             <img src="/img/logo.png" alt="" width={100} />
           </div>
-          
+
           {/* Название */}
           <div style={styles.titleContainer}>
             <h1 style={styles.title}>ЗЕЛЕНЫЙ ГАРАЖ</h1>

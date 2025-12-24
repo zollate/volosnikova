@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
@@ -24,7 +24,7 @@ function Footer() {
               <span style={styles.contactText}>info@zeleniy-garage.ru</span>
             </div>
           </div>
-          
+
           {/* Центральная колонка - часы работы */}
           <div style={styles.column}>
             <h3 style={styles.columnTitle}>Часы работы</h3>
@@ -41,20 +41,28 @@ function Footer() {
               <span style={styles.scheduleTime}>11:00 - 16:00</span>
             </div>
           </div>
-          
+
           {/* Правая колонка - услуги */}
           <div style={styles.column}>
             <h3 style={styles.columnTitle}>Услуги</h3>
-            <a href="#diagnostics" style={styles.serviceLink}>Диагностика</a>
-            <a href="#repair" style={styles.serviceLink}>Ремонт</a>
-            <a href="#tire" style={styles.serviceLink}>Шиномонтаж</a>
-            <a href="#maintenance" style={styles.serviceLink}>Техобслуживание</a>
+            <a href="#diagnostics" style={styles.serviceLink}>
+              Диагностика
+            </a>
+            <a href="#repair" style={styles.serviceLink}>
+              Ремонт
+            </a>
+            <a href="#tire" style={styles.serviceLink}>
+              Шиномонтаж
+            </a>
+            <a href="#maintenance" style={styles.serviceLink}>
+              Техобслуживание
+            </a>
           </div>
         </div>
-        
+
         {/* Разделитель */}
         <div style={styles.divider}></div>
-        
+
         {/* Нижняя часть футера */}
         <div style={styles.bottomSection}>
           {/* Логотип и копирайт */}
@@ -65,19 +73,25 @@ function Footer() {
               </div>
               <span style={styles.footerTitle}>ЗЕЛЕНЫЙ ГАРАЖ</span>
             </div>
-            <p style={styles.copyright}>
-              © {currentYear} Зеленый гараж. Все права защищены.
-            </p>
+            <p style={styles.copyright}>© {currentYear} Зеленый гараж. Все права защищены.</p>
           </div>
-          
+
           {/* Социальные сети */}
           <div style={styles.social}>
             <h4 style={styles.socialTitle}>Мы в соцсетях:</h4>
             <div style={styles.socialIcons}>
-              <a href="#vk" style={styles.socialLink} aria-label="ВКонтакте">VK</a>
-              <a href="#telegram" style={styles.socialLink} aria-label="Telegram">TG</a>
-              <a href="#instagram" style={styles.socialLink} aria-label="Instagram">IG</a>
-              <a href="#youtube" style={styles.socialLink} aria-label="YouTube">YT</a>
+              <a href="#vk" style={styles.socialLink} aria-label="ВКонтакте">
+                VK
+              </a>
+              <a href="#telegram" style={styles.socialLink} aria-label="Telegram">
+                TG
+              </a>
+              <a href="#instagram" style={styles.socialLink} aria-label="Instagram">
+                IG
+              </a>
+              <a href="#youtube" style={styles.socialLink} aria-label="YouTube">
+                YT
+              </a>
             </div>
           </div>
         </div>
@@ -235,12 +249,12 @@ const styles = {
 };
 
 // Добавляем обработчики для hover эффектов
-Object.keys(styles).forEach(key => {
+Object.keys(styles).forEach((key) => {
   if (key.includes('Hover')) {
     const baseKey = key.replace('Hover', '');
     const originalStyle = styles[baseKey];
     const hoverStyle = styles[key];
-    
+
     // Для React inline стилей нужно будет добавить onMouseEnter/onMouseLeave
     // Здесь просто оставляем стили для справки
   }

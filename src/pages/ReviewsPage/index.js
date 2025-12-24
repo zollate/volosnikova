@@ -1,3 +1,3 @@
-import ReviewsPage from './ReviewsPage'
+import ReviewsPage from './ReviewsPage';
 
-export default ReviewsPage
+export default ReviewsPage;

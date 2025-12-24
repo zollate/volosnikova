@@ -15,8 +15,8 @@ const Footer = () => {
               <span className="footer-logo-text">ТЮНИНГ АВТОВАЗ</span>
             </div>
             <p className="footer-description">
-              Оригинальные запчасти и аксессуары для тюнинга автомобилей ВАЗ. 
-              Доставка по всей России.
+              Оригинальные запчасти и аксессуары для тюнинга автомобилей ВАЗ. Доставка по всей
+              России.
             </p>
           </div>
 
@@ -38,8 +38,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          
         </div>
 
         {/* Преимущества */}
@@ -62,9 +60,7 @@ const Footer = () => {
 
         {/* Копирайт */}
         <div className="footer-bottom">
-          <div className="copyright">
-            © {currentYear} Тюнинг АвтоВАЗ. Все права защищены.
-          </div>
+          <div className="copyright">© {currentYear} Тюнинг АвтоВАЗ. Все права защищены.</div>
           <div className="footer-links">
             <a href="/privacy">Политика конфиденциальности</a>
             <a href="/oferta">Публичная оферта</a>
@@ -72,7 +68,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

@@ -21,7 +21,7 @@ $radius: 16px;
     display: flex;
     gap: 40px;
     position: relative;
-    
+
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -48,7 +48,7 @@ $radius: 16px;
     gap: 10px;
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
     h2 {
       font-size: 1.2rem;
@@ -92,7 +92,7 @@ $radius: 16px;
     text-align: left;
 
     &:hover {
-      background-color: rgba(0,0,0,0.03);
+      background-color: rgba(0, 0, 0, 0.03);
       color: $primary-color;
     }
 
@@ -127,7 +127,7 @@ $radius: 16px;
       background: #ddd;
       border-radius: 4px;
       outline: none;
-      
+
       // Chrome/Safari Thumb
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -152,7 +152,7 @@ $radius: 16px;
   // --- CUSTOM SELECT ---
   &__select-wrapper {
     position: relative;
-    
+
     // Кастомная стрелочка
     &::after {
       content: '';
@@ -225,20 +225,20 @@ $radius: 16px;
     &:hover {
       transform: translateY(-6px); // Эффект парения
     }
-    
+
     // Предполагается, что внутри CatalogCard есть свои стили,
     // но добавим wrapper стили для консистентности
     & > div {
-       height: 100%;
-       box-shadow: $shadow-sm;
-       border-radius: $radius;
-       background: $white;
-       overflow: hidden;
-       transition: box-shadow 0.3s ease;
-       
-       &:hover {
-         box-shadow: $shadow-md;
-       }
+      height: 100%;
+      box-shadow: $shadow-sm;
+      border-radius: $radius;
+      background: $white;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: $shadow-md;
+      }
     }
   }
 
@@ -246,12 +246,12 @@ $radius: 16px;
   &__empty {
     text-align: center;
     padding: 60px 0;
-    
+
     h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
-    
+
     p {
       color: $text-gray;
       margin-bottom: 20px;
@@ -267,7 +267,7 @@ $radius: 16px;
     cursor: pointer;
     font-weight: 500;
     transition: opacity 0.2s;
-    
+
     &:hover {
       opacity: 0.9;
     }
@@ -303,7 +303,7 @@ $radius: 16px;
       &.active {
         background-color: $text-dark; // Черный (или primary) для активной страницы
         color: $white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
     }
   }

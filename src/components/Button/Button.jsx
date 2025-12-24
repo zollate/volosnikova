@@ -1,11 +1,11 @@
-import './Button.scss'
+import './Button.scss';
 
-const Button = ({children, ...props}) => {
+const Button = ({ children, ...props }) => {
   return (
     <button className="button" {...props}>
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
